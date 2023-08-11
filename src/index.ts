@@ -20,15 +20,15 @@ export const app = new App(
       ? new AnimeTosho()
       : null,
     // Only enable AnimeBytes if you have an account
-    process.env.ANIMEBYTES_ENABLED.toLowerCase() === 'true'
-      ? new AnimeBytes(
-          process.env.ANIMEBYTES_PASSKEY,
-          process.env.ANIMEBYTES_USERNAME
-        )
-      : null,
-    process.env.RUTRACKER_ENABLED.toLowerCase() === 'true'
-      ? new Rutracker()
-      : null
+    // process.env.ANIMEBYTES_ENABLED.toLowerCase() === 'true'
+    //   ? new AnimeBytes(
+    //       process.env.ANIMEBYTES_PASSKEY,
+    //       process.env.ANIMEBYTES_USERNAME
+    //     )
+    //   : null,
+    // process.env.RUTRACKER_ENABLED.toLowerCase() === 'true'
+    //   ? new Rutracker()
+    //   : null
   ].filter(provider => provider !== null),
   [new ApiRoute()]
 )
